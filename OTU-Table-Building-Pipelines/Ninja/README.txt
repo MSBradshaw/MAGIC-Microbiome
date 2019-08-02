@@ -1,0 +1,1 @@
+The runNinja.bash script can be run to convert cleaned reads into an OTU table using the NINJA software.

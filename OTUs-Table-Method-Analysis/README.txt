@@ -1,0 +1,7 @@
+The script OTU-table-filter.R was used to accomplish the following decision outlined in the paper.
+
+We validated the Novogene pipeline for taxonomic classification by comparing the generated OTU tables to those of two alternative pipelines.
+
+Qiime was used as one form of building an OTU table. This was accomplished by running each sample through a series of Qiime scripts. We used the clean reads as input to pick_otus.py, which identifies OTUs using a clustering method, defined by Edgar, RC 2010, that groups together OTUs based on percent identity to a reference database. We then assigned the OTUs taxonomic classifications using Qiime’s make_otu_table.py script. This produced one file of OTU raw abundance data per sample in BIOM format. These were then combined using the merge_otu_tables.py script from Qiime. Supplementary Note 2 contains a more detailed description of the commands used. The resulting OTU file contained 55,735 OTUs for 701 samples.
+
+We additionally used NINJA-OPS (Not Just Another OTU-Picking Solution) (Al-Ghalith et. al, 2016) to verify the Novogene tables. NINJA-OPS is a novel method that uses reference-based marker gene matching. The algorithm exploits the Burrows-Wheeler alignment by using concatenated reference sequences to create an artificial reference chromosome as input. We used the clean reads as input to the NINJA-OPS software in order to generate OTU tables. Supplementary Note 3 contains the command used. The resulting table contained 36,686 OTUs for 701 samples.
