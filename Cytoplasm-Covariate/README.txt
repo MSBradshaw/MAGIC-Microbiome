@@ -1,0 +1,1 @@
+This dirrectory contains the code used to perform the QTL analysis with cytoplasmic inheritance (maternal line) as a co-variate. Also present are results graphs from said QTL analysis.
